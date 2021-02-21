@@ -27,7 +27,7 @@ export class Daemon {
     checkVersion() {
         return new Promise((resolve, reject) => {
             if (process.platform === "win32") {
-                let wallstreetbetsd_path = path.join(__arqma_bin, "wallstreetbetsd.exe")
+                let wallstreetbetsd_path = path.join(__wallstreet_bin, "wallstreetbetsd.exe")
                 let wallstreetbetsd_version_cmd = `"${wallstreetbetsd_path}" --version`
                 if (!fs.existsSync(wallstreetbetsd_path))
                     resolve(false)
@@ -37,7 +37,7 @@ export class Daemon {
                     resolve(stdout)
                 })
             } else {
-                let wallstreetbetsd_path = path.join(__arqma_bin, "wallstreetbetsd")
+                let wallstreetbetsd_path = path.join(__wallstreet_bin, "wallstreetbetsd")
                 let wallstreetbetsd_version_cmd = `"${wallstreetbetsd_path}" --version`
                 if (!fs.existsSync(wallstreetbetsd_path))
                     resolve(false)
@@ -171,9 +171,9 @@ export class Daemon {
             }
 
             if (process.platform === "win32") {
-                this.daemonProcess = child_process.spawn(path.join(__arqma_bin, "wallstreetbetsd.exe"), args)
+                this.daemonProcess = child_process.spawn(path.join(__wallstreet_bin, "wallstreetbetsd.exe"), args)
             } else {
-                this.daemonProcess = child_process.spawn(path.join(__arqma_bin, "wallstreetbetsd"), args, {
+                this.daemonProcess = child_process.spawn(path.join(__wallstreet_bin, "wallstreetbetsd"), args, {
                     detached: true
                 })
             }

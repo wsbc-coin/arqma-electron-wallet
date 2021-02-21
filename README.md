@@ -22,8 +22,8 @@ nvm use 11.9.0
 npm install -g quasar-cli
 git clone https://github.com/arqma/arqma-electron-wallet
 cd arqma-electron-gui-wallet
-cp path_to_arqma_binaries/wallstreetbetsd bin/
-cp path_to_arqma_binaries/wallstreetbets-wallet-rpc bin/
+cp path_to_wallstreet_binaries/wallstreetbetsd bin/
+cp path_to_wallstreet_binaries/wallstreetbets-wallet-rpc bin/
 npm install
 ```
 

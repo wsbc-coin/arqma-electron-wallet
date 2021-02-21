@@ -12,9 +12,9 @@ const path = require("path");
  */
 if (process.env.PROD) {
     global.__statics = path.join(__dirname, "statics").replace(/\\/g, "\\\\")
-    global.__arqma_bin = path.join(__dirname, "..", "bin").replace(/\\/g, "\\\\")
+    global.__wallstreet_bin = path.join(__dirname, "..", "bin").replace(/\\/g, "\\\\")
 } else {
-    global.__arqma_bin = path.join(process.cwd(), "bin").replace(/\\/g, "\\\\")
+    global.__wallstreet_bin = path.join(process.cwd(), "bin").replace(/\\/g, "\\\\")
 }
 
 let mainWindow, backend, tray
