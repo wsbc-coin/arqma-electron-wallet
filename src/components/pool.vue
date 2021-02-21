@@ -693,7 +693,7 @@ export default {
                 {label: "Dashboard", value: "main", icon: "dashboard"},
                 {label: "Workers", value: "workers", icon: "person"},
                 {label: "Blocks", value: "blocks", icon: "view_list"},
-                {label: "Stats", value: "stats", icon: "view_list"},
+ <!--               {label: "Stats", value: "stats", icon: "view_list"}, -->
             ]
             return tabs
         },
