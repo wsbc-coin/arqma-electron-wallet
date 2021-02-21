@@ -17,9 +17,9 @@ async function download () {
                 if (platform === "darwin") {
                     return url.includes("osx-x64-v6.1.0.zip")
                 } else if (platform === "win32") {
-                    return url.includes("win64")
+                    return url.includes("windows-release")
                 }
-                return url.includes("x86_64-linux-gnu-compat.tar.gz")
+                return url.includes("linux-compat-release-v0.5.4.0.tar.gz")
             })
 
         if (!url) { throw new Error("Download url not found for " + process) }
