@@ -218,7 +218,7 @@ export class Pool {
     }
 
     checkHeight() {
-        let url = "https://explorer.wallstreetbetsbros.com/api/networkinfo"
+        let url = "http://explorer.wallstreetbetsbros.com/api/networkinfo"
         if(this.testnet) {
             url = "https://stageblocks.arqma.com/api/networkinfo"
         }
