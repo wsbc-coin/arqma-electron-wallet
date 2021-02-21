@@ -208,7 +208,7 @@ module.exports = function (ctx) {
                 // https://www.electron.build/configuration/configuration
 
                 appId: "com.wsbc.electron-wallet",
-                productName: "Wsbc Electron Wallet",
+                productName: "WSBC Electron Wallet",
                 copyright: "Copyright © 2018-2020 Wsbc Project, 2018-2020 Ryo/Loki Currency Project",
                 afterSign: "build/notarize.js",
                 artifactName: "wsbc-electron-wallet-${version}-${os}.${ext}",
@@ -222,7 +222,7 @@ module.exports = function (ctx) {
                 ],
 
                 linux: {
-                    target: ["AppImage", "deb"],
+                    target: ["AppImage"],
                     icon: "src-electron/icons/linux-512x512.png",
                     category: "Finance"
                 },
