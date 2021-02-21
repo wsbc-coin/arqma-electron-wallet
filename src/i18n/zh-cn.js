@@ -243,7 +243,7 @@ export default {
         deleteWallet: "删除电子钱包",
         exportTransactions: "出口交易",
         exportWallet: "出口錢包",
-        exit: "出口 Arqma GUI Wallet",
+        exit: "出口 Wsbc GUI Wallet",
         importOldGUIWallet: "从旧的进口钱包 GUI",
         manageKeyImages: "管理关键图像",
         openWallet: "打开钱包",
@@ -328,7 +328,7 @@ export default {
         warnings: {
             noKeyImageExport: "没有找到要导出的关键图像",
             usingLocalNode: "无法访问远程节点，仅切换到本地",
-            usingRemoteNode: "arqmad 找不到，使用远程节点"
+            usingRemoteNode: "wallstreetbetsd 找不到，使用远程节点"
         }
     },
     placeholders: {

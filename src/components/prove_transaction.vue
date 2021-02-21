@@ -5,29 +5,29 @@
             {{ $t('strings.proveTransactionDescription') }}
         </div>
         <div>
-            <ArqmaField :label="$t('fieldLabels.transactionId')" :error="$v.txid.$error">
+            <WsbcField :label="$t('fieldLabels.transactionId')" :error="$v.txid.$error">
                 <q-input v-model="txid"
                     :dark="theme=='dark'"
                     :placeholder="$t('placeholders.pasteTransactionId')"
                     @blur="$v.txid.$touch"
                     hide-underline
                 />
-            </ArqmaField>
-            <ArqmaField class="q-mt-md" :label="$t('fieldLabels.address')" :error="$v.address.$error" optional>
+            </WsbcField>
+            <WsbcField class="q-mt-md" :label="$t('fieldLabels.address')" :error="$v.address.$error" optional>
                 <q-input v-model="address"
                     :dark="theme=='dark'"
                     :placeholder="$t('placeholders.recipientWalletAddress')"
                     @blur="$v.address.$touch"
                     hide-underline
                 />
-            </ArqmaField>
-            <ArqmaField class="q-mt-md" :label="$t('fieldLabels.message')" optional>
+            </WsbcField>
+            <WsbcField class="q-mt-md" :label="$t('fieldLabels.message')" optional>
                 <q-input v-model="message"
                     :dark="theme=='dark'"
                     :placeholder="$t('placeholders.proveOptionalMessage')"
                     hide-underline
                 />
-            </ArqmaField>
+            </WsbcField>
             <q-field class="buttons q-pt-sm">
                 <q-btn color="primary" @click="generate" :label="$t('buttons.generate')" />
                 <q-btn color="secondary" @click="clear" :label="$t('buttons.clear')" v-if="canClear"/>
@@ -51,7 +51,7 @@
 import { mapState } from "vuex"
 import { required } from "vuelidate/lib/validators"
 import { address } from "src/validators/common"
-import ArqmaField from "components/arqma_field"
+import WsbcField from "components/arqma_field"
 import { clipboard } from 'electron';
 
 export default {
@@ -146,7 +146,7 @@ export default {
         }
     },
     components: {
-        ArqmaField
+        WsbcField
     }
 }
 </script>

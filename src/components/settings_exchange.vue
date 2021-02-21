@@ -1,47 +1,47 @@
 <template>
 <div class="settings-exchange">
     <div class="row pl-sm">
-        <ArqmaField class="col-4" :label="$t('fieldLabels.protocol')" disable>
+        <WsbcField class="col-4" :label="$t('fieldLabels.protocol')" disable>
             <q-input
                 v-model="config.market.exchange.protocol"
                 :placeholder="toString(market.exchange.protocol)"
                 :dark="theme=='dark'"
                 hide-underline
             />
-        </ArqmaField>
-        <ArqmaField class="col-8" :label="$t('fieldLabels.hostname')" disable>
+        </WsbcField>
+        <WsbcField class="col-8" :label="$t('fieldLabels.hostname')" disable>
             <q-input
                 v-model="config.market.exchange.hostname"
                 :placeholder="toString(market.exchange.hostname)"
                 :dark="theme=='dark'"
                 hide-underline
             />
-        </ArqmaField>
+        </WsbcField>
     </div>
     <div class="row pl-sm">
-        <ArqmaField class="col-10" :label="$t('fieldLabels.endpoint')" disable>
+        <WsbcField class="col-10" :label="$t('fieldLabels.endpoint')" disable>
             <q-input
                 v-model="config.market.exchange.endpoint"
                 :placeholder="toString(market.exchange.endpoint)"
                 :dark="theme=='dark'"
                 hide-underline
             />
-        </ArqmaField>
-        <ArqmaField class="col-2" :label="$t('fieldLabels.port')" disable>
+        </WsbcField>
+        <WsbcField class="col-2" :label="$t('fieldLabels.port')" disable>
             <q-input
                 v-model="config.market.exchange.port"
                 :placeholder="toString(market.exchange.port)"
                 :dark="theme=='dark'"
                 hide-underline
             />
-        </ArqmaField>
+        </WsbcField>
     </div>
 </div>
 </template>
 
 <script>
 import { mapState } from "vuex"
-import ArqmaField from "components/arqma_field"
+import WsbcField from "components/arqma_field"
 export default {
     name: "SettingsExchange",
     props: {
@@ -71,7 +71,7 @@ export default {
         }
     },
     components: {
-        ArqmaField,
+        WsbcField,
     }
 }
 </script>

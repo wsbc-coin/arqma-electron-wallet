@@ -11,7 +11,7 @@
 
                 <!-- Amount -->
                 <div class="col-6">
-                    <ArqmaField :label="$t('fieldLabels.amount')" :error="$v.newTx.amount.$error">
+                    <WsbcField :label="$t('fieldLabels.amount')" :error="$v.newTx.amount.$error">
                         <q-input v-model="newTx.amount"
                             :dark="theme=='dark'"
                             type="number"
@@ -24,24 +24,24 @@
                         <q-btn color="secondary" @click="newTx.amount = unlocked_balance / 1e9" :text-color="theme=='dark'?'white':'dark'">
                             {{ $t("buttons.all") }}
                         </q-btn>
-                    </ArqmaField>
+                    </WsbcField>
                 </div>
 
                 <!-- Priority -->
                 <div class="col-6">
-                    <ArqmaField :label="$t('fieldLabels.priority')">
+                    <WsbcField :label="$t('fieldLabels.priority')">
                         <q-select :dark="theme=='dark'"
                             v-model="newTx.priority"
                             :options="priorityOptions"
                             hide-underline
                         />
-                    </ArqmaField>
+                    </WsbcField>
                 </div>
             </div>
 
             <!-- Address -->
             <div class="col q-mt-sm">
-                <ArqmaField :label="$t('fieldLabels.address')" :error="$v.newTx.address.$error">
+                <WsbcField :label="$t('fieldLabels.address')" :error="$v.newTx.address.$error">
                      <q-input v-model="newTx.address"
                         :dark="theme=='dark'"
                         @blur="$v.newTx.address.$touch"
@@ -51,31 +51,31 @@
                     <q-btn color="secondary" :text-color="theme=='dark'?'white':'dark'" to="addressbook">
                         {{ $t("buttons.contacts") }}
                     </q-btn>
-                </ArqmaField>
+                </WsbcField>
             </div>
 
             <!-- Payment ID -->
             <div class="col q-mt-sm">
-                <ArqmaField :label="$t('fieldLabels.paymentId')" :error="$v.newTx.payment_id.$error" optional>
+                <WsbcField :label="$t('fieldLabels.paymentId')" :error="$v.newTx.payment_id.$error" optional>
                      <q-input v-model="newTx.payment_id"
                         :dark="theme=='dark'"
                         @blur="$v.newTx.payment_id.$touch"
                         :placeholder="$t('placeholders.hexCharacters', { count: '16 or 64' })"
                         hide-underline
                     />
-                </ArqmaField>
+                </WsbcField>
             </div>
 
             <!-- Notes -->
             <div class="col q-mt-sm">
-                <ArqmaField :label="$t('fieldLabels.notes')" optional>
+                <WsbcField :label="$t('fieldLabels.notes')" optional>
                      <q-input v-model="newTx.note"
                         type="textarea"
                         :dark="theme=='dark'"
                         :placeholder="$t('placeholders.transactionNotes')"
                         hide-underline
                     />
-                </ArqmaField>
+                </WsbcField>
             </div>
 
             <!-- Save to address book -->
@@ -84,14 +84,14 @@
             </q-field>
 
             <div v-if="newTx.address_book.save">
-                <ArqmaField :label="$t('fieldLabels.name')" optional>
+                <WsbcField :label="$t('fieldLabels.name')" optional>
                      <q-input v-model="newTx.address_book.name"
                         :dark="theme=='dark'"
                         :placeholder="$t('placeholders.addressBookName')"
                         hide-underline
                     />
-                </ArqmaField>
-                <ArqmaField class="q-mt-sm" :label="$t('fieldLabels.notes')" optional>
+                </WsbcField>
+                <WsbcField class="q-mt-sm" :label="$t('fieldLabels.notes')" optional>
                      <q-input v-model="newTx.address_book.description"
                         type="textarea"
                         rows="2"
@@ -99,7 +99,7 @@
                         :placeholder="$t('placeholders.additionalNotes')"
                         hide-underline
                     />
-                </ArqmaField>
+                </WsbcField>
             </div>
 
             <q-field class="q-pt-sm">
@@ -125,7 +125,7 @@ import { mapState } from "vuex"
 import { required, decimal } from "vuelidate/lib/validators"
 import { payment_id, address, greater_than_zero } from "src/validators/common"
 import Identicon from "components/identicon"
-import ArqmaField from "components/arqma_field"
+import WsbcField from "components/arqma_field"
 import WalletPassword from "src/mixins/wallet_password"
 const objectAssignDeep = require("object-assign-deep");
 
@@ -318,7 +318,7 @@ export default {
     mixins: [WalletPassword],
     components: {
         Identicon,
-        ArqmaField
+        WsbcField
     }
 }
 </script>

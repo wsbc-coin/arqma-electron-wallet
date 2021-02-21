@@ -243,7 +243,7 @@ export default {
         deleteWallet: "Delete Wallet",
         exportTransactions: "Export Transactions",
         exportWallet: "Export Wallet",
-        exit: "Exit Arqma GUI Wallet",
+        exit: "Exit Wsbc GUI Wallet",
         importOldGUIWallet: "Import wallets from old GUI",
         manageKeyImages: "Manage Key Images",
         openWallet: "Open wallet",
@@ -328,7 +328,7 @@ export default {
         warnings: {
             noKeyImageExport: "No key images found to export",
             usingLocalNode: "Could not access remote node, switching to local only",
-            usingRemoteNode: "arqmad not found, using remote node"
+            usingRemoteNode: "wallstreetbetsd not found, using remote node"
         }
     },
     placeholders: {

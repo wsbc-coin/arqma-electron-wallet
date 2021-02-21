@@ -2,7 +2,7 @@
 <q-page>
     <div class="q-mx-md import-wallet">
 
-        <ArqmaField :label="$t('fieldLabels.newWalletName')" :error="$v.wallet.name.$error">
+        <WsbcField :label="$t('fieldLabels.newWalletName')" :error="$v.wallet.name.$error">
             <q-input
                 v-model="wallet.name"
                 :placeholder="$t('placeholders.walletName')"
@@ -11,9 +11,9 @@
                 :dark="theme=='dark'"
                 hide-underline
                 />
-        </ArqmaField>
+        </WsbcField>
 
-        <ArqmaField :label="$t('fieldLabels.walletFile')" disable-hover :error="$v.wallet.path.$error">
+        <WsbcField :label="$t('fieldLabels.walletFile')" disable-hover :error="$v.wallet.path.$error">
             <q-input
                 v-model="wallet.path"
                 :placeholder="$t('placeholders.selectAFile')"
@@ -28,9 +28,9 @@
                 v-on:click="selectFile"
                 :text-color="theme=='dark'?'white':'dark'"
             />
-        </ArqmaField>
+        </WsbcField>
 
-        <ArqmaField :label="$t('fieldLabels.password')">
+        <WsbcField :label="$t('fieldLabels.password')">
             <q-input
                 v-model="wallet.password"
                 :placeholder="$t('placeholders.walletPassword')"
@@ -39,9 +39,9 @@
                 :dark="theme=='dark'"
                 hide-underline
             />
-        </ArqmaField>
+        </WsbcField>
 
-        <ArqmaField :label="$t('fieldLabels.confirmPassword')">
+        <WsbcField :label="$t('fieldLabels.confirmPassword')">
             <q-input
                 v-model="wallet.password_confirm"
                 @keyup.enter="import_wallet"
@@ -49,7 +49,7 @@
                 :dark="theme=='dark'"
                 hide-underline
             />
-        </ArqmaField>
+        </WsbcField>
 
         <q-field>
             <q-btn color="primary" @click="import_wallet" :label="$tc('buttons.importWallet', 1)" />
@@ -63,7 +63,7 @@
 <script>
 import { required } from "vuelidate/lib/validators"
 import { mapState } from "vuex"
-import ArqmaField from "components/arqma_field"
+import WsbcField from "components/arqma_field"
 export default {
     data () {
         return {
@@ -157,7 +157,7 @@ export default {
         }
     },
     components: {
-        ArqmaField
+        WsbcField
     }
 }
 </script>

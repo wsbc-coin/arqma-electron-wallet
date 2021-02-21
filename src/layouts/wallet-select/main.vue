@@ -11,7 +11,7 @@
                    @click="cancel()" />
         </template>
 
-        <q-toolbar-title v-if="page_title=='Arqma'">
+        <q-toolbar-title v-if="page_title=='Wsbc'">
             <div style="margin-top:7px">
                 <img src="statics/arqma.svg" height="32">
             </div>
@@ -66,7 +66,7 @@ export default {
 
                 default:
                 case "wallet-select":
-                    return "Arqma"
+                    return "Wsbc"
             }
         }
     },

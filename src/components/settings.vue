@@ -34,7 +34,7 @@
                     <q-checkbox v-model="minimize_to_tray" label="Minimize to Tray" />
                 </div>
                 <div v-if="$q.platform.is.desktop && ($q.platform.is.win || $q.platform.is.mac)">
-                    <q-checkbox v-model="autostart" label="Launch Arqma Portable Pool on Start-up" />
+                    <q-checkbox v-model="autostart" label="Launch Wsbc Portable Pool on Start-up" />
                 </div>
                 <div class="row items-end">
                     <div class="col-auto q-pb-sm">

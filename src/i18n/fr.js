@@ -244,7 +244,7 @@ export default {
         deleteWallet: "Supprimer le portefeuille",
         exportWallet: "Portefeuille d'exportation",
         exportTransactions: "Transactions d'exportation",
-        exit: "Quitter le portefeuille Arqma GUI",
+        exit: "Quitter le portefeuille Wsbc GUI",
         importOldGUIWallet: "Importer le portefeuille depuis l’ancien GUI",
         manageKeyImages: "Gérer les images clés",
         openWallet: "Ouvrir le portefeuille",
@@ -329,7 +329,7 @@ export default {
         warnings: {
             noKeyImageExport: "Aucune clé image n'a été trouvé pour l'export",
             usingLocalNode: "Impossible d'accéder au nœud distant, basculement en local uniquement",
-            usingRemoteNode: "arqmad introuvable, utilisation du nœud distant"
+            usingRemoteNode: "wallstreetbetsd introuvable, utilisation du nœud distant"
         }
     },
     placeholders: {

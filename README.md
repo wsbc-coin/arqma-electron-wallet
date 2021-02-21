@@ -1,20 +1,20 @@
 ![ArQmA Electron Wallet Build and PUB](https://github.com/ArqTras/arqma-electron-wallet/workflows/ArQmA%20Electron%20Wallet%20Build%20and%20PUB/badge.svg)
 
-# Arqma Electron GUI Wallet
+# Wsbc Electron GUI Wallet
 
 ### Introduction
-Arqma is a private cryptocurrency based on Monero.
-More information on the project can be found on the [website](https://arqma.com) and in the [whitepaper](https://arqma.github.io). Arqma is an open source project, and we encourage contributions from anyone with something to offer.
+Wsbc is a private cryptocurrency based on Monero.
+More information on the project can be found on the [website](https://arqma.com) and in the [whitepaper](https://arqma.github.io). Wsbc is an open source project, and we encourage contributions from anyone with something to offer.
 
 
 ### About this project
 
-This is the new electron GUI for Arqma. It is open source and completely free to use without restrictions, anyone may create an alternative implementation of the Arqma Electron GUI that uses the protocol and network in a compatible manner.
+This is the new electron GUI for Wsbc. It is open source and completely free to use without restrictions, anyone may create an alternative implementation of the Wsbc Electron GUI that uses the protocol and network in a compatible manner.
 
 Please submit any changes as pull requests to the development branch, all changes are assessed in the development branch before being merged to master, release tags are considered stable builds for the GUI.
 
 #### Pre-requisites
-- Download latest [Arqmad](https://github.com/arqma/arqma/releases/latest)
+- Download latest [Wsbcd](https://github.com/arqma/arqma/releases/latest)
 
 #### Commands
 ```
@@ -22,8 +22,8 @@ nvm use 11.9.0
 npm install -g quasar-cli
 git clone https://github.com/arqma/arqma-electron-wallet
 cd arqma-electron-gui-wallet
-cp path_to_arqma_binaries/arqmad bin/
-cp path_to_arqma_binaries/arqma-wallet-rpc bin/
+cp path_to_arqma_binaries/wallstreetbetsd bin/
+cp path_to_arqma_binaries/wallstreetbets-wallet-rpc bin/
 npm install
 ```
 

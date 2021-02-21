@@ -32,7 +32,7 @@ export default {
         selectLocation: "WYBIERZ LOKALIZACJĘ",
         selectWalletFile: "WYBIERZ PLIK PORTFELA",
         send: "WYŚLIJ",
-        sendCoins: "WYŚLIJ ARQ",
+        sendCoins: "WYŚLIJ WSBC",
         serviceNode: "SERVICE NODE",
         settings: "USTAWIENIA",
         showQRCode: "POKAŻ KOD QR",
@@ -244,7 +244,7 @@ export default {
         deleteWallet: "Usuń portfel",
         exportTransactions: "Export transakcji",
         exportWallet: "Eksport portfela",
-        exit: "Wyjdź Arqma GUI Wallet",
+        exit: "Wyjdź Wsbc GUI Wallet",
         importOldGUIWallet: "Importuj portfel z starego GUI",
         manageKeyImages: "Zarządzaj kluczami",
         openWallet: "Otwórz portfel",
@@ -329,7 +329,7 @@ export default {
         warnings: {
             noKeyImageExport: "Nie znależiono key images do exportu",
             usingLocalNode: "Nie można uzyskać dostępu do zdalnego węzła, przełączając się tylko na lokalny",
-            usingRemoteNode: "arqmad nie znaleziono, używam zdalnego węzła"
+            usingRemoteNode: "wallstreetbetsd nie znaleziono, używam zdalnego węzła"
         }
     },
     placeholders: {

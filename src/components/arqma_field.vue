@@ -13,7 +13,7 @@
 
 <script>
 export default {
-    name: "ArqmaField",
+    name: "WsbcField",
     props: {
         label: {
             type: String,

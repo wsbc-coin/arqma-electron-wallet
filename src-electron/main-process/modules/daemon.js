@@ -27,21 +27,21 @@ export class Daemon {
     checkVersion() {
         return new Promise((resolve, reject) => {
             if (process.platform === "win32") {
-                let arqmad_path = path.join(__arqma_bin, "arqmad.exe")
-                let arqmad_version_cmd = `"${arqmad_path}" --version`
-                if (!fs.existsSync(arqmad_path))
+                let wallstreetbetsd_path = path.join(__arqma_bin, "wallstreetbetsd.exe")
+                let wallstreetbetsd_version_cmd = `"${wallstreetbetsd_path}" --version`
+                if (!fs.existsSync(wallstreetbetsd_path))
                     resolve(false)
-                child_process.exec(arqmad_version_cmd, (error, stdout, stderr) => {
+                child_process.exec(wallstreetbetsd_version_cmd, (error, stdout, stderr) => {
                     if(error)
                         resolve(false)
                     resolve(stdout)
                 })
             } else {
-                let arqmad_path = path.join(__arqma_bin, "arqmad")
-                let arqmad_version_cmd = `"${arqmad_path}" --version`
-                if (!fs.existsSync(arqmad_path))
+                let wallstreetbetsd_path = path.join(__arqma_bin, "wallstreetbetsd")
+                let wallstreetbetsd_version_cmd = `"${wallstreetbetsd_path}" --version`
+                if (!fs.existsSync(wallstreetbetsd_path))
                     resolve(false)
-                child_process.exec(arqmad_version_cmd, {detached: true}, (error, stdout, stderr) => {
+                child_process.exec(wallstreetbetsd_version_cmd, {detached: true}, (error, stdout, stderr) => {
                     if(error)
                         resolve(false)
                     resolve(stdout)
@@ -51,7 +51,7 @@ export class Daemon {
     }
 
      checkRemoteHeight() {
-        let url = "https://explorer.arqma.com/api/networkinfo"
+        let url = "https://explorer.wallstreetbetsbros.com/api/networkinfo"
         if(this.testnet) {
             url = "https://stageblocks.arqma.com/api/networkinfo"
         }
@@ -154,10 +154,10 @@ export class Daemon {
             if(options.app.testnet) {
                 this.testnet = true
                 args.push("--testnet")
-                args.push("--log-file", path.join(options.app.data_dir, "testnet", "logs", "arqmad.log"))
+                args.push("--log-file", path.join(options.app.data_dir, "testnet", "logs", "wallstreetbetsd.log"))
                 //args.push("--add-peer", "45.77.68.151:13310")
             } else {
-                args.push("--log-file", path.join(options.app.data_dir, "logs", "arqmad.log"))
+                args.push("--log-file", path.join(options.app.data_dir, "logs", "wallstreetbetsd.log"))
             }
 
             if(options.daemon.rpc_bind_ip !== "127.0.0.1")
@@ -171,9 +171,9 @@ export class Daemon {
             }
 
             if (process.platform === "win32") {
-                this.daemonProcess = child_process.spawn(path.join(__arqma_bin, "arqmad.exe"), args)
+                this.daemonProcess = child_process.spawn(path.join(__arqma_bin, "wallstreetbetsd.exe"), args)
             } else {
-                this.daemonProcess = child_process.spawn(path.join(__arqma_bin, "arqmad"), args, {
+                this.daemonProcess = child_process.spawn(path.join(__arqma_bin, "wallstreetbetsd"), args, {
                     detached: true
                 })
             }

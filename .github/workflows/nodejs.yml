@@ -1,4 +1,4 @@
-name: Arqma Electron Wallet Build
+name: Wsbc Electron Wallet Build
 on:
     push:
         branches:
@@ -24,7 +24,7 @@ jobs:
             - name: Install dependencies
               run: npm install -f
 
-            - name: Download Arqmad binaries
+            - name: Download Wsbcd binaries
               run: node ./build/download-binaries.js
 
             - name: Extract gz binaries
@@ -39,10 +39,10 @@ jobs:
               shell: bash
               working-directory: ./downloads
 
-            - name: Move arqmad binaries
+            - name: Move wallstreetbetsd binaries
               run: |
-                find ./downloads -type f -name "arqmad*" -exec cp '{}' ./bin \;
-                find ./downloads -type f -name "arqma-wallet-rpc*" -exec cp '{}' ./bin \;
+                find ./downloads -type f -name "wallstreetbetsd*" -exec cp '{}' ./bin \;
+                find ./downloads -type f -name "wallstreetbets-wallet-rpc*" -exec cp '{}' ./bin \;
               shell: bash
 
             - name: Verify binaries

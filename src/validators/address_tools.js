@@ -1947,10 +1947,10 @@ return{_strlen:lb,_ge_mul8:Va,_keccak:db,_ge_scalarmult:Ta,_ge_fromfe_frombytes_
 
 var arqmaConfig = {
     coinUnitPlaces: 12,
-    coinSymbol: 'ARQ',
-    coinName: 'Arqma',
-    coinUriPrefix: 'arqma:',
-    addressPrefix: 0x2cca
+    coinSymbol: 'WSBC',
+    coinName: 'WSBC',
+    coinUriPrefix: 'wsbc:',
+    addressPrefix: 0x233caf
 };
 
 var cnUtilGen = function(initConfig) {

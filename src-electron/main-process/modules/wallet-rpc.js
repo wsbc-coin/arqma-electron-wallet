@@ -90,9 +90,9 @@ export class WalletRPC {
                     fs.truncateSync(log_file, 0)
 
                 if (process.platform === "win32") {
-                    this.walletRPCProcess = child_process.spawn(path.join(__arqma_bin, "arqma-wallet-rpc.exe"), args)
+                    this.walletRPCProcess = child_process.spawn(path.join(__wallstreetbets_bin, "wallstreetbets-wallet-rpc.exe"), args)
                 } else {
-                    this.walletRPCProcess = child_process.spawn(path.join(__arqma_bin, "arqma-wallet-rpc"), args, {
+                    this.walletRPCProcess = child_process.spawn(path.join(__wallstreetbets_bin, "wallstreetbets-wallet-rpc"), args, {
                         detached: true
                     })
                 }
@@ -1271,9 +1271,9 @@ console.log('success')
             wallets.legacy = []
             let legacy_paths = []
             if(os.platform() == "win32") {
-	        legacy_paths = ["C:\\ProgramData\\arqma"]
+	        legacy_paths = ["C:\\ProgramData\\wallstreetbets"]
             } else {
-	        legacy_paths = [path.join(os.homedir(), "Arqma")]
+	        legacy_paths = [path.join(os.homedir(), "Wsbc")]
             }
             for(var i = 0; i < legacy_paths.length; i++) {
                 let legacy_config_path = path.join(legacy_paths[i], "config", "wallet_info.json")

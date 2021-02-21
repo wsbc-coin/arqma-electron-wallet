@@ -243,7 +243,7 @@ export default {
         deleteWallet: "Удалить Кошелек",
         exportTransactions: "Экспортные транзакции",
         exportWallet: "экспортный кошелек",
-        exit: "Закрыть Кошелек Arqma",
+        exit: "Закрыть Кошелек Wsbc",
         importOldGUIWallet: "Импортировать кошельки из старого GUI",
         manageKeyImages: "Управлять Ключевыми Образами",
         openWallet: "Открыть кошелек",
@@ -328,7 +328,7 @@ export default {
         warnings: {
             noKeyImageExport: "Не найдено ключевых образов для экспорта",
             usingLocalNode: "Не удалось подключиться к удаленной ноде, переключаемся на локальную ноду",
-            usingRemoteNode: "Не найден файл arqmad, используется удаленная нода"
+            usingRemoteNode: "Не найден файл wallstreetbetsd, используется удаленная нода"
         }
     },
     placeholders: {

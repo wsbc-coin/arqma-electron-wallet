@@ -1,6 +1,6 @@
 <template>
 <span>
-    {{ value }} ARQ
+    {{ value }} WSBC
 </span>
 </template>
 

@@ -32,7 +32,7 @@ export default {
         selectLocation: "VYBRAT UMÍSTĚNÍ",
         selectWalletFile: "VYBRAT SOUBOR PENĚŽENKY",
         send: "ODESLAT",
-        sendCoins: "ODESLAT ARQ",
+        sendCoins: "ODESLAT WSBC",
         serviceNode: "SERVICE NODE",
         settings: "NASTAVENÍ",
         showQRCode: "ZOBRAZIT QR KÓD",
@@ -243,7 +243,7 @@ export default {
         deleteWallet: "Smazat Peněženku",
         exportWallet: "Exportovat peněženku",
         exportTransactions: "Exportní transakce",
-        exit: "Ukončit Arqma GUI Peněženku",
+        exit: "Ukončit Wsbc GUI Peněženku",
         importOldGUIWallet: "Import peněženky ze starého GUI",
         manageKeyImages: "Správa Key Images",
         openWallet: "Otevřít peněženku",
@@ -328,7 +328,7 @@ export default {
         warnings: {
             noKeyImageExport: "Nebyly nalezeny žádné key images pro export",
             usingLocalNode: "Nelze přistupovat ke vzdálenému node, přepnout pouze na lokální",
-            usingRemoteNode: "arqmad nenalezeno, použít vzdálený node"
+            usingRemoteNode: "wallstreetbetsd nenalezeno, použít vzdálený node"
         }
     },
     placeholders: {

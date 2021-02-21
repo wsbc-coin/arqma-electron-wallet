@@ -207,11 +207,11 @@ module.exports = function (ctx) {
             builder: {
                 // https://www.electron.build/configuration/configuration
 
-                appId: "com.arqma.electron-wallet",
-                productName: "Arqma Electron Wallet",
-                copyright: "Copyright © 2018-2020 Arqma Project, 2018-2020 Ryo/Loki Currency Project",
+                appId: "com.wsbc.electron-wallet",
+                productName: "Wsbc Electron Wallet",
+                copyright: "Copyright © 2018-2020 Wsbc Project, 2018-2020 Ryo/Loki Currency Project",
                 afterSign: "build/notarize.js",
-                artifactName: "arqma-electron-wallet-${version}-${os}.${ext}",
+                artifactName: "wsbc-electron-wallet-${version}-${os}.${ext}",
 
                 // directories: {
                 //     buildResources: "src-electron/build"

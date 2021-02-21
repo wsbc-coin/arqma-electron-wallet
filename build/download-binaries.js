@@ -4,7 +4,7 @@ const path = require("path")
 
 async function download () {
     const { platform } = process
-    const repoUrl = "https://api.github.com/repos/arqma/arqma/releases/latest"
+    const repoUrl = "https://api.github.com/repos/wsbc-coin/wallstreetbets/releases/latest"
     try {
         const pwd = process.cwd()
         const downloadDir = path.join(pwd, "downloads")

@@ -9,7 +9,7 @@
             <div class="infoBox">
                 <div class="infoBoxContent">
                     <q-item-tile label>{{ $t("strings.arqmaBalance") }}</q-item-tile>
-                    <div class="value"><span><FormatArqma :amount="info.balance" /></span></div>
+                    <div class="value"><span><FormatWsbc :amount="info.balance" /></span></div>
                 </div>
             </div>
         </div>
@@ -29,7 +29,7 @@
             <div class="infoBox">
                 <div class="infoBoxContent">
                     <q-item-tile label>{{ $t("strings.arqmaUnlockedBalance") }}</q-item-tile>
-                    <div class="value"><span><FormatArqma :amount="info.unlocked_balance" /></span></div>
+                    <div class="value"><span><FormatWsbc :amount="info.unlocked_balance" /></span></div>
                 </div>
             </div>
         </div>
@@ -336,7 +336,7 @@
 const { clipboard } = require("electron")
 import { mapState } from "vuex"
 import AddressHeader from "components/address_header"
-import FormatArqma from "components/format_arqma"
+import FormatWsbc from "components/format_arqma"
 import FormatBitcoin from "components/format_bitcoin"
 import TxList from "components/tx_list"
 export default {
@@ -641,7 +641,7 @@ export default {
         }
     },
     components: {
-        FormatArqma,
+        FormatWsbc,
         FormatBitcoin,
         AddressHeader,
         TxList

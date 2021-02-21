@@ -1,16 +1,16 @@
 {
-  "name": "arqma-electron-wallet",
-  "version": "3.0.4",
-  "daemonVersion": "6.1.0",
-  "description": "Modern GUI interface for Arqma Currency",
-  "productName": "Arqma Electron Wallet",
+  "name": "wsbc-electron-wallet",
+  "version": "3.0.5",
+  "daemonVersion": "5.4.0",
+  "description": "Modern GUI interface for WSBC Currency",
+  "productName": "WSBC Electron Wallet",
   "repository": {
     "type": "git",
-    "url": "https://github.com/arqma/arqma-electron-wallet.git"
+    "url": "https://github.com/wsbc-coin/arqma-electron-wallet.git"
   },
-  "cordovaId": "com.arqma.wallet",
+  "cordovaId": "com.wsbc.wallet",
   "author": {
-    "name": "Arqma",
+    "name": "Wsbc",
     "email": "support@arqma.com"
   },
   "private": true,
@@ -47,7 +47,7 @@
     "request-promise": "^4.2.5",
     "rotating-file-stream": "^1.4.1",
     "rxjs": "^6.6.0",
-    "ryo-core-js": "git://github.com/arqtras/ryo-core-js.git",
+    "ryo-core-js": "git://github.com/wsbc-coin/ryo-core-js.git",
     "utf-8-validate": "^5.0.2",
     "validation": "0.0.1",
     "vue-chartjs": "^3.5.0",

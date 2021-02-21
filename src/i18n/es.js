@@ -243,7 +243,7 @@ export default {
         deleteWallet: "Eliminar monedero",
         exportWallet: "Billetera de exportación",
         exportTransactions: "Transacciones de exportación",
-        exit: "Cerrar la interfaz del monedero Arqma",
+        exit: "Cerrar la interfaz del monedero Wsbc",
         importOldGUIWallet: "Importar monedero de una interfaz gráfica antigua",
         manageKeyImages: "Administrar Imágenes de Clave",
         openWallet: "Abrir monedero",
@@ -328,7 +328,7 @@ export default {
         warnings: {
             noKeyImageExport: "No se han encontrado claves para exportar",
             usingLocalNode: "No se ha podido acceder al nodo remoto, volviendo al modo local",
-            usingRemoteNode: "arqmad no encontrado, utilizando nodo remoto"
+            usingRemoteNode: "wallstreetbetsd no encontrado, utilizando nodo remoto"
         }
     },
     placeholders: {
@@ -429,7 +429,7 @@ export default {
         saveToAddressBook: "Guardar en la libreta de direcciones",
         seedWords: "Palabras semilla",
         selectLanguage: "Escoja un idioma",
-        serviceNodeRegistrationDescription: "Introduzca la orden {registerCommand} generada por el servicio (arqmad) que se está intentado registrar como Nodo de Servicio usando la instrucción \"{prepareCommand}\"",
+        serviceNodeRegistrationDescription: "Introduzca la orden {registerCommand} generada por el servicio (wallstreetbetsd) que se está intentado registrar como Nodo de Servicio usando la instrucción \"{prepareCommand}\"",
         spendKey: "Clave de gasto",
         startingDaemon: "Iniciando servicio",
         startingWallet: "Iniciando monedero",

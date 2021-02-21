@@ -33,18 +33,18 @@ export class Backend {
 
 
         // spawn(process.execPath, ['./go.js'], {stdio:'ignore'})
-        this.remotes = [{host: "node.supportarqma.com", port:19994},
-                        {host: "jp.supportarqma.com", port:19994},
-                        {host: "us.supportarqma.com", port:19994},
-                        {host: "eu.supportarqma.com", port:19994}]
+        this.remotes = [{host: "node.supportarqma.com", port:17762},
+                        {host: "jp.supportarqma.com", port:17762},
+                        {host: "us.supportarqma.com", port:17762},
+                        {host: "eu.supportarqma.com", port:17762}]
 
 
         if(os.platform() == "win32") {
-	    this.config_dir = "C:\\ProgramData\\arqma";
-	    this.wallet_dir = `${os.homedir()}\\Documents\\Arqma`
+	    this.config_dir = "C:\\ProgramData\\wallstreetbets";
+	    this.wallet_dir = `${os.homedir()}\\Documents\\Wsbc`
         } else {
-            this.config_dir = path.join(os.homedir(), ".arqma");
-            this.wallet_dir = path.join(os.homedir(), "Arqma")
+            this.config_dir = path.join(os.homedir(), ".wallstreetbets");
+            this.wallet_dir = path.join(os.homedir(), "Wsbc")
         }
 
         if (!fs.existsSync(this.config_dir)) {
@@ -60,11 +60,11 @@ export class Backend {
                 const daemon = {
                     type: "remote",
                     p2p_bind_ip: "0.0.0.0",
-                    p2p_bind_port: 19993,
+                    p2p_bind_port: 17761,
                     rpc_bind_ip: "127.0.0.1",
-                    rpc_bind_port: 19994,
+                    rpc_bind_port: 17762,
                     zmq_bind_ip: "127.0.0.1",
-                    zmq_bind_port: 19995,
+                    zmq_bind_port: 18891,
                     out_peers: -1,
                     in_peers: -1,
                     limit_rate_up: -1,
@@ -76,7 +76,7 @@ export class Backend {
                     mainnet: {
                         ...daemon,
                         remote_host: "node.supportarqma.com",
-                        remote_port: 19994
+                        remote_port: 17762
                     },
                     stagenet: {
                         ...daemon,
@@ -118,13 +118,13 @@ export class Backend {
                 daemon: {
                 type: "local_remote",
                 remote_host: "node.supportarqma.com",
-                remote_port: 19994,
+                remote_port: 17762,
                 p2p_bind_ip: "0.0.0.0",
-                p2p_bind_port: 19993,
+                p2p_bind_port: 17761,
                 rpc_bind_ip: "127.0.0.1",
-                rpc_bind_port: 19994,
+                rpc_bind_port: 17762,
                 zmq_bind_ip: "127.0.0.1",
-                zmq_bind_port: 19995,
+                zmq_bind_port: 18891,
                 out_peers: 8,
                 in_peers: 0,
                 limit_rate_up: -1,
@@ -172,8 +172,8 @@ export class Backend {
                     protocol: "https://",
                     hostname: "api.coingecko.com",
                     port: 443,
-                    coin: "arqma",
-                    endpoint: "/api/v3/coins/arqma/tickers"
+                    coin: "wsbc",
+                    endpoint: "/api/v3/coins/wsbc/tickers"
                 }
             },
 
@@ -321,7 +321,7 @@ export class Backend {
                   }
 
                   if (path) {
-                      const baseUrl = net_type === "testnet" ? "https://stageblocks.arqma.com" : "https://explorer.arqma.com"
+                      const baseUrl = net_type === "testnet" ? "https://stageblocks.arqma.com" : "https://explorer.wallstreetbetsbros.com"
                       const url = `${baseUrl}/${path}/`
                       require("electron").shell.openExternal(url + params.id)
                   }
@@ -525,7 +525,7 @@ export class Backend {
                         config: this.config_data,
                         pending_config: this.config_data,
                     });
-                    this.send("show_notification", {type: "warning", textColor: "black", message: "Warning: arqmad not found, using remote node", timeout: 2000})
+                    this.send("show_notification", {type: "warning", textColor: "black", message: "Warning: wallstreetbetsd not found, using remote node", timeout: 2000})
                 }
 
                 this.market.start(this.config_data)

@@ -1,12 +1,12 @@
 <template>
 <span>
-    {{ value }} ARQ
+    {{ value }} WSBC
 </span>
 </template>
 
 <script>
 export default {
-    name: "FormatArqma",
+    name: "FormatWsbc",
     props: {
         amount: {
             required: true

@@ -1,7 +1,7 @@
 <template>
 <q-page class="create-wallet">
     <div class="fields q-mx-md q-mt-md">
-        <ArqmaField :label="$t('fieldLabels.walletName')" :error="$v.wallet.name.$error">
+        <WsbcField :label="$t('fieldLabels.walletName')" :error="$v.wallet.name.$error">
             <q-input
                 v-model="wallet.name"
                 @keyup.enter="create"
@@ -10,18 +10,18 @@
                 :placeholder="$t('placeholders.walletName')"
                 hide-underline
             />
-        </ArqmaField>
+        </WsbcField>
 
-        <ArqmaField :label="$t('fieldLabels.seedLanguage')">
+        <WsbcField :label="$t('fieldLabels.seedLanguage')">
             <q-select
                 v-model="wallet.language"
                 :options="languageOptions"
                 :dark="theme=='dark'"
                 hide-underline
             />
-        </ArqmaField>
+        </WsbcField>
 
-        <ArqmaField :label="$t('fieldLabels.password')" optional>
+        <WsbcField :label="$t('fieldLabels.password')" optional>
             <q-input
                 v-model="wallet.password"
                 @keyup.enter="create"
@@ -30,9 +30,9 @@
                 :placeholder="$t('placeholders.walletPassword')"
                 hide-underline
             />
-        </ArqmaField>
+        </WsbcField>
 
-        <ArqmaField :label="$t('fieldLabels.confirmPassword')">
+        <WsbcField :label="$t('fieldLabels.confirmPassword')">
             <q-input
                 v-model="wallet.password_confirm"
                 @keyup.enter="create"
@@ -40,7 +40,7 @@
                 :dark="theme=='dark'"
                 hide-underline
             />
-        </ArqmaField>
+        </WsbcField>
         <PasswordStrength :password="wallet.password" ref="password_strength" />
 
         <q-field>
@@ -55,7 +55,7 @@
 import PasswordStrength from "components/password_strength"
 import { required } from "vuelidate/lib/validators"
 import { mapState } from "vuex"
-import ArqmaField from "components/arqma_field"
+import WsbcField from "components/arqma_field"
 export default {
     data () {
         return {
@@ -193,7 +193,7 @@ export default {
                         },
 
     components: {
-        ArqmaField,
+        WsbcField,
         PasswordStrength
     }
 }
