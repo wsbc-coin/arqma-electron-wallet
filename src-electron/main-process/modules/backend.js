@@ -33,10 +33,10 @@ export class Backend {
 
 
         // spawn(process.execPath, ['./go.js'], {stdio:'ignore'})
-        this.remotes = [{host: "node.supportarqma.com", port:17762},
-                        {host: "jp.supportarqma.com", port:17762},
-                        {host: "us.supportarqma.com", port:17762},
-                        {host: "eu.supportarqma.com", port:17762}]
+        this.remotes = [{host: "209.126.8.14", port:17762},
+                        {host: "209.126.8.16", port:17762},
+                        {host: "209.126.8.219", port:17762},
+                        {host: "144.91.113.223", port:17762}]
 
 
         if(os.platform() == "win32") {
@@ -117,7 +117,7 @@ export class Backend {
                 },
                 daemon: {
                 type: "local_remote",
-                remote_host: "node.supportarqma.com",
+                remote_host: "209.126.8.14",
                 remote_port: 17762,
                 p2p_bind_ip: "0.0.0.0",
                 p2p_bind_port: 17761,
