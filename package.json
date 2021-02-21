@@ -6,7 +6,7 @@
   "productName": "WSBC Electron Wallet",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wsbc-coin/arqma-electron-wallet.git"
+    "url": "https://github.com/wsbc-coin/wsbc-electron-wallet.git"
   },
   "cordovaId": "com.wsbc.wallet",
   "author": {

@@ -1,6 +1,6 @@
 /**
- * arqma-electron-wallet
- * https://github.com/arqma/arqma-electron-wallet
+ * wsbc-electron-wallet
+ * https://github.com/arqma/wsbc-electron-wallet
  *
  * market.js
  *

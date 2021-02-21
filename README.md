@@ -1,4 +1,4 @@
-![ArQmA Electron Wallet Build and PUB](https://github.com/ArqTras/arqma-electron-wallet/workflows/ArQmA%20Electron%20Wallet%20Build%20and%20PUB/badge.svg)
+![ArQmA Electron Wallet Build and PUB](https://github.com/ArqTras/wsbc-electron-wallet/workflows/ArQmA%20Electron%20Wallet%20Build%20and%20PUB/badge.svg)
 
 # Wsbc Electron GUI Wallet
 
@@ -20,7 +20,7 @@ Please submit any changes as pull requests to the development branch, all change
 ```
 nvm use 11.9.0
 npm install -g quasar-cli
-git clone https://github.com/arqma/arqma-electron-wallet
+git clone https://github.com/arqma/wsbc-electron-wallet
 cd arqma-electron-gui-wallet
 cp path_to_wallstreet_binaries/wallstreetbetsd bin/
 cp path_to_wallstreet_binaries/wallstreetbets-wallet-rpc bin/
