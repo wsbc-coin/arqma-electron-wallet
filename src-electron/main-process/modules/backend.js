@@ -75,7 +75,7 @@ export class Backend {
                 const daemons = {
                     mainnet: {
                         ...daemon,
-                        remote_host: "node.supportarqma.com",
+                        remote_host: "209.126.8.14",
                         remote_port: 17762
                     },
                     stagenet: {
