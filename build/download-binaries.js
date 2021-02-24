@@ -19,7 +19,7 @@ async function download () {
                 } else if (platform === "win32") {
                     return url.includes("windows-release")
                 }
-                return url.includes("linux-compat-release-v0.5.4.0.tar.gz")
+                return url.includes("linux-compat-release-v0.5.5.0.tar.gz")
             })
 
         if (!url) { throw new Error("Download url not found for " + process) }
