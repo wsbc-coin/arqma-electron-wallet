@@ -156,8 +156,8 @@ export class Database {
         }
 
         const blocksFound = Object.keys(blocks).length
-        const networkHashrate = diff / 120
-        const blockTime = 1000 * 120 * networkHashrate / h.hashrate_5min
+        const networkHashrate = diff / 60
+        const blockTime = 1000 * 60 * networkHashrate / h.hashrate_5min
 
         this.stats = {
             stats: {
