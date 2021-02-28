@@ -15,11 +15,11 @@ async function download () {
             .map(asset => asset["browser_download_url"])
             .find(url => {
                 if (platform === "darwin") {
-                    return url.includes("osx-x64-v6.1.0.zip")
+                    return url.includes("osx-x64-v6.3.0.zip")
                 } else if (platform === "win32") {
                     return url.includes("windows-release")
                 }
-                return url.includes("linux-compat-release-v0.6.2.0.tar.gz")
+                return url.includes("linux-compat-release-v0.6.3.0.tar.gz")
             })
 
         if (!url) { throw new Error("Download url not found for " + process) }
