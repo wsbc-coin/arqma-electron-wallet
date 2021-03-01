@@ -1,7 +1,7 @@
 {
   "name": "wsbc-electron-wallet",
-  "version": "4.0.1",
-  "daemonVersion": "6.4.0",
+  "version": "4.0.2",
+  "daemonVersion": "6.5.0",
   "description": "Modern GUI interface for WSBC Currency",
   "productName": "WSBC Electron Wallet",
   "repository": {
