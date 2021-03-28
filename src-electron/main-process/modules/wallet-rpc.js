@@ -744,12 +744,12 @@ export class WalletRPC {
             const params = sweep_all ? {
                 "address": address,
                 "account_index": 0,
-                "priority": priority,
-                "mixin": 10 // Always force a ring size of 10 (ringsize = mixin + 1)
+                "priority": priority
+            //    "mixin": 10 // Always force a ring size of 10 (ringsize = mixin + 1)
             } : {
                 "destinations": [{ "amount": amount, "address": address }],
-                "priority": priority,
-                "mixin": 10
+                "priority": priority
+              //  "mixin": 10
             }
 
             if (payment_id) {
